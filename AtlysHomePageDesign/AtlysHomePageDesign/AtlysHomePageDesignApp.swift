@@ -11,7 +11,8 @@ import SwiftUI
 struct AtlysHomePageDesignApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AtlysHomePage()
         }
     }
 }
+
