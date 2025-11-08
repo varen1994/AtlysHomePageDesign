@@ -17,7 +17,7 @@ struct AtlysHomePageLoginModes: View {
         case apple
         case email
     }
-    
+    var selectedMode:AtlysHomePage.KeyboardMode
     let iconSize:CGFloat = 20.0
     var loginModel:(LoginMode)->Void
     
@@ -50,7 +50,7 @@ struct AtlysHomePageLoginModes: View {
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 8.0).stroke(Color.gray, lineWidth: 1)
-                        Image(uiImage: UIImage(named: "GoogleIcon")!).resizable().frame(width: iconSize, height: iconSize, alignment: .center)
+                        Image(systemName: selectedMode == .email ? "phone.fill" : "mail.fill").resizable().frame(width: iconSize, height: iconSize, alignment: .center)
                     }.frame(width: 40, height: 40, alignment: .center)
                 }
             }
