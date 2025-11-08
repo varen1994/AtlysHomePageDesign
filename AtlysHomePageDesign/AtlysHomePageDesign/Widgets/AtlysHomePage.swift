@@ -20,9 +20,12 @@ struct AtlysHomePage: View {
     
     var body: some View {
         ScrollView {
-            VStack(alignment: .center, spacing: 10) {
+            VStack(alignment: .center,spacing: 8.0) {
                 AtlysHomePageIconWidget()
-                Text("Get Visas\nOn Time").multilineTextAlignment(.center).font(Font.system(size: 35.0,weight: .bold)).lineSpacing(5)
+            
+                AltysCountryCardCarouselView()
+                
+                Text("Get Visas\nOn Time").multilineTextAlignment(.center).font(Font.system(size: 35.0,weight: .bold)).lineSpacing(5).padding()
                 
                 if keyboardMode == .phoneNumber {
                     ZStack {
@@ -35,14 +38,14 @@ struct AtlysHomePage: View {
                             }
                             TextField("Enter mobile number", text: $phoneNumber).keyboardType(.numberPad).focused($phoneAndEmailFocusState)
                         }
-                    }.frame(height: 48.0).padding()
+                    }.frame(height: 48.0).padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
                 } else {
                     ZStack {
                         RoundedRectangle(cornerRadius: 8.0).stroke(Color.gray, lineWidth: 1)
                         HStack(alignment: .center,spacing: 10.0) {
                             TextField("Enter your email", text: $email).keyboardType(.emailAddress).focused($phoneAndEmailFocusState)
                         }.padding()
-                    }.frame(height: 48.0).padding()
+                    }.frame(height: 48.0).padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
                 }
                 
                 Button {
@@ -51,7 +54,7 @@ struct AtlysHomePage: View {
                     ZStack {
                         RoundedRectangle(cornerRadius: 8.0).fill(Color.blue)
                         Text("Continue").foregroundColor(Color.white)
-                    }.frame(height: 48.0, alignment: .center).padding()
+                    }.frame(height: 48.0, alignment: .center).padding(EdgeInsets(top: 0, leading: 16, bottom: 8, trailing: 16))
                 }
 
                 ZStack {
