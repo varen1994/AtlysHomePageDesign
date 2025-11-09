@@ -7,7 +7,21 @@
 
 import SwiftUI
 
+struct CountryCard: Identifiable {
+    let id = UUID()
+    let name: String
+    let subtitle: String
+    let imageName: String
+}
+
+
 struct AtlysHomePage: View {
+    
+    let cards: [CountryCard] = [
+        .init(name: "Dubai", subtitle: "10K+ Visas on Atlys", imageName: "DubaiImage"),
+        .init(name: "France", subtitle: "12K+ Visas on Atlys", imageName: "ParisImage"),
+        .init(name: "India", subtitle: "8K+ Visas on Atlys", imageName: "IndiaImage"),
+    ]
     
     enum KeyboardMode {
         case email
@@ -23,7 +37,8 @@ struct AtlysHomePage: View {
             VStack(alignment: .center,spacing: 8.0) {
                 AtlysHomePageIconWidget()
             
-                AltysCountryCardCarouselView()
+                AtlysCarousalSwiftUIView(data: cards).frame( height: 300)
+              //  AltysCountryCardCarouselView()
                 
                 Text("Get Visas\nOn Time").multilineTextAlignment(.center).font(Font.system(size: 35.0,weight: .bold)).lineSpacing(5).padding()
                 

@@ -9,8 +9,9 @@
 /* Begin PBXBuildFile section */
 		58483EAA2EBEF56E00097BBA /* AtlysHomePageIconWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58483EA92EBEF56E00097BBA /* AtlysHomePageIconWidget.swift */; };
 		58483EAC2EBF002400097BBA /* AtlysHomePageLoginModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58483EAB2EBF002400097BBA /* AtlysHomePageLoginModes.swift */; };
-		58483EAE2EBF0D0E00097BBA /* AtlysCountryCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58483EAD2EBF0D0E00097BBA /* AtlysCountryCardView.swift */; };
-		58483EB02EBF0DD400097BBA /* AtlysCountryCardCarousalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58483EAF2EBF0DD400097BBA /* AtlysCountryCardCarousalView.swift */; };
+		58483EB32EC0F08700097BBA /* CustomFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58483EB22EC0F08700097BBA /* CustomFlowLayout.swift */; };
+		58483EB52EC0F0D400097BBA /* AtlysCustomCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58483EB42EC0F0D400097BBA /* AtlysCustomCollectionView.swift */; };
+		58483EB72EC0F89A00097BBA /* CountryCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58483EB62EC0F89A00097BBA /* CountryCardCell.swift */; };
 		58BF0C372EBE49D600598C71 /* AtlysHomePageDesignApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BF0C362EBE49D600598C71 /* AtlysHomePageDesignApp.swift */; };
 		58BF0C392EBE49D600598C71 /* AtlysHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58BF0C382EBE49D600598C71 /* AtlysHomePage.swift */; };
 		58BF0C3B2EBE49D800598C71 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58BF0C3A2EBE49D800598C71 /* Assets.xcassets */; };
@@ -20,8 +21,9 @@
 /* Begin PBXFileReference section */
 		58483EA92EBEF56E00097BBA /* AtlysHomePageIconWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlysHomePageIconWidget.swift; sourceTree = "<group>"; };
 		58483EAB2EBF002400097BBA /* AtlysHomePageLoginModes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlysHomePageLoginModes.swift; sourceTree = "<group>"; };
-		58483EAD2EBF0D0E00097BBA /* AtlysCountryCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlysCountryCardView.swift; sourceTree = "<group>"; };
-		58483EAF2EBF0DD400097BBA /* AtlysCountryCardCarousalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlysCountryCardCarousalView.swift; sourceTree = "<group>"; };
+		58483EB22EC0F08700097BBA /* CustomFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFlowLayout.swift; sourceTree = "<group>"; };
+		58483EB42EC0F0D400097BBA /* AtlysCustomCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlysCustomCollectionView.swift; sourceTree = "<group>"; };
+		58483EB62EC0F89A00097BBA /* CountryCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCardCell.swift; sourceTree = "<group>"; };
 		58BF0C332EBE49D600598C71 /* AtlysHomePageDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtlysHomePageDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58BF0C362EBE49D600598C71 /* AtlysHomePageDesignApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlysHomePageDesignApp.swift; sourceTree = "<group>"; };
 		58BF0C382EBE49D600598C71 /* AtlysHomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtlysHomePage.swift; sourceTree = "<group>"; };
@@ -46,10 +48,18 @@
 				58BF0C382EBE49D600598C71 /* AtlysHomePage.swift */,
 				58483EA92EBEF56E00097BBA /* AtlysHomePageIconWidget.swift */,
 				58483EAB2EBF002400097BBA /* AtlysHomePageLoginModes.swift */,
-				58483EAD2EBF0D0E00097BBA /* AtlysCountryCardView.swift */,
-				58483EAF2EBF0DD400097BBA /* AtlysCountryCardCarousalView.swift */,
+				58483EB42EC0F0D400097BBA /* AtlysCustomCollectionView.swift */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		58483EB12EC0F07500097BBA /* FlowLayout */ = {
+			isa = PBXGroup;
+			children = (
+				58483EB22EC0F08700097BBA /* CustomFlowLayout.swift */,
+				58483EB62EC0F89A00097BBA /* CountryCardCell.swift */,
+			);
+			path = FlowLayout;
 			sourceTree = "<group>";
 		};
 		58BF0C2A2EBE49D600598C71 = {
@@ -71,6 +81,7 @@
 		58BF0C352EBE49D600598C71 /* AtlysHomePageDesign */ = {
 			isa = PBXGroup;
 			children = (
+				58483EB12EC0F07500097BBA /* FlowLayout */,
 				58483EA82EBEF55100097BBA /* Widgets */,
 				58BF0C362EBE49D600598C71 /* AtlysHomePageDesignApp.swift */,
 				58BF0C3A2EBE49D800598C71 /* Assets.xcassets */,
@@ -158,11 +169,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				58483EAC2EBF002400097BBA /* AtlysHomePageLoginModes.swift in Sources */,
+				58483EB52EC0F0D400097BBA /* AtlysCustomCollectionView.swift in Sources */,
 				58483EAA2EBEF56E00097BBA /* AtlysHomePageIconWidget.swift in Sources */,
 				58BF0C392EBE49D600598C71 /* AtlysHomePage.swift in Sources */,
 				58BF0C372EBE49D600598C71 /* AtlysHomePageDesignApp.swift in Sources */,
-				58483EAE2EBF0D0E00097BBA /* AtlysCountryCardView.swift in Sources */,
-				58483EB02EBF0DD400097BBA /* AtlysCountryCardCarousalView.swift in Sources */,
+				58483EB72EC0F89A00097BBA /* CountryCardCell.swift in Sources */,
+				58483EB32EC0F08700097BBA /* CustomFlowLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
