@@ -32,7 +32,7 @@ struct AtlysHomePageLoginModes: View {
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 8.0).stroke(Color.gray, lineWidth: 1)
-                        Image(uiImage: UIImage(named: "GoogleIcon")!).resizable().frame(width: iconSize, height: iconSize, alignment: .center)
+                        Image(uiImage: UIImage(named: "GoogleIcon")!).resizable().scaledToFit().frame(width: iconSize, height: iconSize, alignment: .center)
                     }.frame(width: 40, height: 40, alignment: .center)
                 }
 
@@ -41,7 +41,7 @@ struct AtlysHomePageLoginModes: View {
                 } label: {
                     ZStack {
                         RoundedRectangle(cornerRadius: 8.0).stroke(Color.gray, lineWidth: 1)
-                        Image(uiImage: UIImage(named: "AppleIcon")!).resizable().frame(width: iconSize, height: iconSize, alignment: .center)
+                        Image(uiImage: UIImage(named: "AppleIcon")!).resizable().scaledToFit().frame(width: iconSize, height: iconSize, alignment: .center)
                     }.frame(width: 40, height: 40, alignment: .center)
                 }
                 

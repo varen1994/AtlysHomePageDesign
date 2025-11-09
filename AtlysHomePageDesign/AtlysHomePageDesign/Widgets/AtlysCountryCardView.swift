@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AtlysCountryCardView: View {
+    let cardSize:CGFloat = 250
     var countryName: String
     var subtitle: String
     var imageName: String
@@ -19,11 +20,11 @@ struct AtlysCountryCardView: View {
             Image(imageName)
                 .resizable()
                 .scaledToFill()
-                .frame(width: 220, height: 280)
+                .frame(width: cardSize, height: cardSize)
                 .clipped()
-                .cornerRadius(20)
+                .cornerRadius(10)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 20)
+                    RoundedRectangle(cornerRadius: 10)
                         .stroke(isSelected ? Color.blue : Color.clear, lineWidth: 3)
                 )
             
@@ -31,7 +32,6 @@ struct AtlysCountryCardView: View {
             
             VStack(alignment: .leading, spacing: 8) {
                 Spacer()
-                
                 Text(countryName)
                     .font(.title3.bold())
                     .foregroundColor(.white)
@@ -45,20 +45,7 @@ struct AtlysCountryCardView: View {
                     .cornerRadius(10)
             }
             .padding()
-            
-            // Checkmark icon
-            VStack {
-                HStack {
-                    Spacer()
-                    Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
-                        .font(.title3)
-                        .foregroundColor(.white)
-                        .padding(10)
-                }
-                Spacer()
-            }
         }
-        .frame(width: 220, height: 330)
-        .shadow(radius: 6)
+        .frame(width: cardSize, height: cardSize)
     }
 }
